@@ -5,6 +5,8 @@ import pandas as pd
 from datetime import datetime
 from pathlib import Path
 
+BASE_DIR = Path(__file__).resolve().parent.parent
+
 # ----------------------------
 # Configuration
 # ----------------------------
@@ -12,7 +14,7 @@ from pathlib import Path
 TICKER = "NVDA"
 
 # Create output directory if it doesn't exist
-output_dir = Path("../data/options")
+output_dir = BASE_DIR / "data" / "options"
 output_dir.mkdir(parents=True, exist_ok=True)
 
 # ----------------------------
